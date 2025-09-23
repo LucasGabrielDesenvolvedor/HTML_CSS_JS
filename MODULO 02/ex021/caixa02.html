@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav{
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: 5px 6px 5px 1px rgba(121, 120, 120, 0.582);
+        }
+        nav > a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin: 35px;
+        }
+        nav a:hover{
+            text-decoration: underline;
+        }
+        main{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px 0px;
+            box-shadow: -1px -1px 6px 0px black;
+        }
+        article{
+            background-color: lightgray;
+            padding: 5px;
+        }
+        article > aside {
+            background-color: rgb(165, 165, 165);
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+        footer > p{
+            margin: 0px;
+        }
+        div#bola{
+            height: 100px;
+            width: 100px;
+            background-color: white;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    <header><!--isso é o cabeçalho da pagina-->
+        <h1>Meu Site</h1>
+        <nav><!--isso é o menu da pagina-->
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </header>
+    <main><!--isso é o conteudo da pagina-->
+        <section id="assuntos">
+            <p>esporte politica  e tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article><!--isso é artigo-->
+                <h2>Noticia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur harum qui quibusdam mollitia, explicabo inventore iure. Fuga voluptatum laudantium minima! Fugit laudantium reiciendis eaque maiores unde accusamus omnis sequi iusto.</p>
+                <aside><!--assunto periferico ao artigo relativo ao artigo -->
+                    <p>artigo escrito por maria jose</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section><!--isto é uma sação-->
+    </main>
+    <footer><!--isso é o rodapé da pagina-->
+        <p>Desenvolvido por mim</p>
+    </footer>
+    <div id="bola">
+
+    </div>
+</body>
+</html>

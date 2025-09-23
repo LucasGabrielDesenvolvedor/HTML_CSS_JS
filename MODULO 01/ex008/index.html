@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-fonte / Pré-Formatado</h2>
+    <p>O comando document.getElementeById('teste') é escrito em linguagem JavaScript.</p>
+    <!--Qualde problema desse tipo de exibição aqui, a letra T, L visualmente ocupa menos espaço do que outras letras. Isso aconteçe porque essa fonte não é MONOESPAÇADA, ela não reserva o mesmo espaço  lateral para cada letra. Como resolver isso vamos envelopar com o comando CODE. -->
+    <p>Usando a tag &lt CODE &gt. Ex.: <code>document.getElementeById('teste')</code>. <br>
+    &lt code &gt .</p>
+    
+    <code>
+        num= int(input('digite um número'))
+        if num / 2 == 0:
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é IMPAR')
+        print('Fim do programa')
+    </code>
+    <!--Ao digitarmos as linhas de códigos com identação se utilizarmos a tag CODE ao atualizar a página, as linhas de comandos estarão uma do lado da outra sem identação. Existe uma outra maneira para fazer isso selecione a tag CODE e todo o conteudo e envelopa ela usando a tag PRE.-->
+
+    <p>envelopando a tag &lt CODE &gt com a tag &lt PRE &gt</p>
+    <pre>
+        <code>
+            num= int(input('digite um número'))
+            if num / 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é IMPAR')
+            print('Fim do programa')
+        </code> 
+    </pre>
+
+    <h2>Citações Simples</h2>
+    <p>Como diria um pai de um amigo: o computador é um burro muito rápido</p>
+    <!--Nessa citação podemos usar a tag Q que significa COUNT que é CITAÇÂO para darmos sentido a frase, poderiamos colocar aspas duplas manualmente mas lembrando que HTML se trata de semântica tems que dar sentido as coisas-->
+    <p>Usando a tag &lt Q &gt para dar sentido a citação.</p>
+    <p>Como diria um pai de um amigo: <q>o computador é um burro muito rápido</q></p>
+
+    <h2>Citações Completas</h2>
+    <!--usando a tag BLOCKQUOTE para citações mais complexas com quebras de linhas.-->
+    <p>Segundo Jeff Noble, no seu livro HTML para Leigos:</p>
+    <!--Dentro da tag BLOCKQUOTE podemos colocar o endereço ou link da citação colocando o comando CITE="entre as aspas coloque o link"-->
+    <blockquote cite="https://meuappdecursos.com.br/">
+        A diferença entre elementos inline e um bloco de texto é importante. Os elementos HTML neste capítulo descrevem os blocos de texto.
+    </blockquote>
+
+     <h2>Abreviasões</h2>
+     <p>Estou estudando HTML e CSS. Estou adorando.</p>
+     <!--Há uma tag que mostra o significado das siglas para que seus visitantes vejam ao passar o cursor do mouse na sigla usando a tag ABBR ao envelopar a sigla.-->
+     <p>usando a tag &lt ABBR &gt</p>
+     <p>Estou estudando <abbr title="Hiper Text Markup Language">HTML</abbr> e <abbr title="cascading style sheets">CSS</abbr>. Estou adorando.</p>
+
+     <h2>Texto Invertido</h2>
+     <!--Usando a tag BDO para mostrar as palavras normamlmente ou de trás pra frente.-->
+     <p><bdo dir="ltr">Estou aprendendo a criar coisas em HTML.</bdo></p>
+     <p><bdo dir="rtl">Estou aprendendo a criar coisas em HTML.</bdo></p>
+</body>
+</html>
