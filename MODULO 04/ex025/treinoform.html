@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>formulário Simples</h1>
+    <fieldset>
+        <fieldset>
+            <legend>Cadastro</legend>
+            <form action="cadastro.php" method="get" autocomplete="on">
+                <p>
+                    <label for="inom">Nome: </label>
+                    <input type="text" name="nome" id="inom" required autocomplete="name" placeholder="nome">
+                </p>
+                <p>
+                    <label for="isob">Sobrenome: </label>
+                    <input type="text" name="sobrenome" id="isob" required autocomplete="name" placeholder="sobrenome">
+                </p>
+                <p>
+                    <label for="idata">Data de nascimento: </label>
+                    <input type="date" name="data" id="idata" required autocomplete="bday-day" >
+                </p>
+                <p>
+                    <label for="itel">Telefone: </label>
+                    <input type="tel" name="telefone" id="itel" required autocomplete="tel" placeholder="(xx) xxxxx-xxxx" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" minlength="10" maxlength="11">
+                </p>
+        </fieldset>
+        <fieldset>
+            <legend>Gênero</legend>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <input type="radio" name="sexo" id="imas">
+                <label for="imas">Masculino</label>
+                <input type="radio" name="sexo" id="ifem">
+                <label for="ifem">Feminino</label>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Para Casal</legend>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <p>
+                    Quem é mais velho?
+                    <label for="iela">EU</label>
+                    <input type="radio" name="escolha" id="iela">
+                    <label for="iele">ELE</label>
+                    <input type="radio" name="escolha" id="iele">
+                </p>
+            </form>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </fieldset>
+</body>
+</html>
