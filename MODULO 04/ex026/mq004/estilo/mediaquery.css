@@ -1,6 +1,91 @@
 @charset "UTF-8";   
 /* Todas as demais mídias*/
 
+/* Typical Device Brakpoints 
+
+    Extra Pequeno (Celulares): ate 600px "Smartphones em modo retrato"
+
+    Pequeno (celulares grandes/ tablets em retrato): 600px - 767px "iPhone Plus, tablets pequenos"
+
+    Médio (tablets em paisagem): 768px – 991px 
+    "iPad em modo horizontal"
+
+    Grande (laptops / desktops padrão): 992px – 1199px 
+    "Notebooks comuns, monitores menores"
+
+    Extra grande (desktops grandes): 1200px + 
+    "Monitores widescreen, telas 4K"
+*/
+
 @media print {
-    
+/* background-image é desnecessario para empressoras */
+    body {
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        border: 2px solid black;
+        width: 90%;
+        
+        & h1 {
+            text-shadow: none;
+            color: black;
+        }
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita através do site www.cursoemvideo.com';
+        text-decoration: overline;
+        font-size: medium;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {/*tablets*/
+    body{ 
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px){/*desktop*/
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: block;}
+    img#tv {display: none;}
+}
+
+@media screen and (min-width: 1200px){/*grandes telas*/
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        background-color: rgba(255, 255, 255, 0.438);
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#pc {display: none;}
+    img#tv {display: block;}
 }
